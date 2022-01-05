@@ -1,0 +1,176 @@
+/*-------Reset--------*/
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*-------Common--------*/
+body{
+    background-image: url("bg-img.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vw;
+    overflow-x: hidden;
+}
+button{
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease-in;
+}
+button:hover{
+    background-color: #fff i !important;
+    color: #000 !important;
+}
+input,textarea,table{
+    font-size: 1rem;
+}
+::placeholder{
+    font-size: 0.9rem;
+}
+
+/*-------header--------*/
+header{
+    background-color: #7c0a80;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header .logo{
+    background-color: #fff;
+    color: #7c0a80;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header .search input{
+    width: 250px;
+    height: 30px;
+    padding: 16px 10px;
+}
+
+/*-------Container--------*/
+.container{
+    background-color: transparent;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    border: 5px #7c0a80 solid;
+}
+
+/*-------form--------*/
+.container .inp-frm{
+    width: 60%;
+    padding:10px;
+    margin-right: 5px;
+}
+.container .inp-frm form{
+    margin: auto;
+    background-color: #7c0a80;
+    padding: 15px;
+}
+.container .inp-frm form h3{
+    margin-bottom: 5px;
+    color: #fff;
+}
+.container .inp-frm input{
+    width: 95%;
+    padding: 15px 10px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.container .inp-frm textarea{
+    width: 95%;
+    resize: none;
+}
+.container button{
+    width: 95%;
+    margin-top: 10px;
+}
+.container .inp-frm #save{
+    background-color: #0ba54b;
+    color: #fff;
+}
+.container .inp-frm #reset{
+    background-color: #cf3f06;
+    color: #fff;
+}
+
+/* Table */
+.container .table{
+    width: 60%;
+    max-height: 260px;
+    padding: 10px;
+    margin-left: 10px;
+    overflow: auto;
+}
+.container .table table{
+    width: 100%;
+    background-color: #7c0a80;
+    border-collapse: collapse;
+}
+.container .table .note-body{
+    display: none;
+}
+.container .table table, 
+.container .table table td{
+    border: 2px #fff solid;
+    padding: 5px;
+}
+.container .table table th{
+    padding: 5px;
+    text-align: left;
+    background-color: #ce42d3;
+}
+.container .table table th:last-child,
+.container .table table th:nth-child(2),
+.container .table table.btcellv,
+.container .table table.btcelld{
+    text-align: center;
+}
+.container .table table td{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container .table table .btcellv button{
+    background-color: #0ba54b;
+    color: #fff;
+}
+.container .table table .btcelld button{
+    background-color: #cf3f06;
+    color: #fff;
+}
+
+/*-----Responsive-----*/
+@media(max-width: 600px){
+    /*Header*/
+    header{
+        flex-direction: column;
+    }
+    header .logo{
+        margin-bottom: 10px;
+    }
+
+    /*Container*/
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .inp-frm,
+    .container .table{
+        margin-bottom: 10px;
+        min-width: 250px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
